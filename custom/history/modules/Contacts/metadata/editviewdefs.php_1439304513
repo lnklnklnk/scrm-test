@@ -94,21 +94,6 @@ array (
         array (
           0 => 
           array (
-            'name' => 'grade_c',
-            'studio' => 'visible',
-            'label' => 'LBL_GRADE',
-          ),
-          1 => 
-          array (
-            'name' => 'date_modified',
-            'comment' => 'Date record last modified',
-            'label' => 'LBL_DATE_MODIFIED',
-          ),
-        ),
-        4 => 
-        array (
-          0 => 
-          array (
             'name' => 'description',
             'label' => 'LBL_DESCRIPTION',
           ),

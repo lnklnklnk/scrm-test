@@ -1,5 +1,5 @@
 <?php
- // created: 2015-08-11 16:01:46
+ // created: 2015-08-11 17:03:52
 $layout_defs["fox_Course"]["subpanel_setup"]['fox_course_contacts_1'] = array (
   'order' => 100,
   'module' => 'Contacts',

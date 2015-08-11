@@ -60,9 +60,9 @@ $manifest = array (
   'icon' => '',
   'is_uninstallable' => true,
   'name' => 'Foxford',
-  'published_date' => '2015-08-11 14:01:41',
+  'published_date' => '2015-08-11 15:03:47',
   'type' => 'module',
-  'version' => 1439301706,
+  'version' => 1439305432,
   'remove_tables' => 'prompt',
 );
 
@@ -83,22 +83,22 @@ $installdefs = array (
   array (
     0 => 
     array (
-      'from' => '<basepath>/SugarModules/relationships/layoutdefs/fox_course_contacts_Contacts.php',
+      'from' => '<basepath>/SugarModules/relationships/layoutdefs/fox_course_contacts_1_Contacts.php',
       'to_module' => 'Contacts',
     ),
     1 => 
     array (
-      'from' => '<basepath>/SugarModules/relationships/layoutdefs/fox_course_contacts_fox_Course.php',
+      'from' => '<basepath>/SugarModules/relationships/layoutdefs/fox_course_contacts_1_fox_Course.php',
       'to_module' => 'fox_Course',
     ),
     2 => 
     array (
-      'from' => '<basepath>/SugarModules/relationships/layoutdefs/fox_course_contacts_1_Contacts.php',
+      'from' => '<basepath>/SugarModules/relationships/layoutdefs/fox_course_contacts_Contacts.php',
       'to_module' => 'Contacts',
     ),
     3 => 
     array (
-      'from' => '<basepath>/SugarModules/relationships/layoutdefs/fox_course_contacts_1_fox_Course.php',
+      'from' => '<basepath>/SugarModules/relationships/layoutdefs/fox_course_contacts_fox_Course.php',
       'to_module' => 'fox_Course',
     ),
   ),
@@ -106,11 +106,11 @@ $installdefs = array (
   array (
     0 => 
     array (
-      'meta_data' => '<basepath>/SugarModules/relationships/relationships/fox_course_contactsMetaData.php',
+      'meta_data' => '<basepath>/SugarModules/relationships/relationships/fox_course_contacts_1MetaData.php',
     ),
     1 => 
     array (
-      'meta_data' => '<basepath>/SugarModules/relationships/relationships/fox_course_contacts_1MetaData.php',
+      'meta_data' => '<basepath>/SugarModules/relationships/relationships/fox_course_contactsMetaData.php',
     ),
   ),
   'image_dir' => '<basepath>/icons',
@@ -183,22 +183,22 @@ $installdefs = array (
   array (
     0 => 
     array (
-      'from' => '<basepath>/SugarModules/relationships/vardefs/fox_course_contacts_Contacts.php',
+      'from' => '<basepath>/SugarModules/relationships/vardefs/fox_course_contacts_1_Contacts.php',
       'to_module' => 'Contacts',
     ),
     1 => 
     array (
-      'from' => '<basepath>/SugarModules/relationships/vardefs/fox_course_contacts_fox_Course.php',
+      'from' => '<basepath>/SugarModules/relationships/vardefs/fox_course_contacts_1_fox_Course.php',
       'to_module' => 'fox_Course',
     ),
     2 => 
     array (
-      'from' => '<basepath>/SugarModules/relationships/vardefs/fox_course_contacts_1_Contacts.php',
+      'from' => '<basepath>/SugarModules/relationships/vardefs/fox_course_contacts_Contacts.php',
       'to_module' => 'Contacts',
     ),
     3 => 
     array (
-      'from' => '<basepath>/SugarModules/relationships/vardefs/fox_course_contacts_1_fox_Course.php',
+      'from' => '<basepath>/SugarModules/relationships/vardefs/fox_course_contacts_fox_Course.php',
       'to_module' => 'fox_Course',
     ),
   ),

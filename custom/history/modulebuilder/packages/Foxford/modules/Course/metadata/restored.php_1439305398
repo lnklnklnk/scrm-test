@@ -1,6 +1,6 @@
 <?php
-$module_name='fox_Course';
-$subpanel_layout = array (
+// created: 2015-08-11 17:03:18
+$layout_defs = array (
   'top_buttons' => 
   array (
     0 => 
