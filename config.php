@@ -1,5 +1,5 @@
 <?php
-// created: 2015-08-10 16:20:31
+// created: 2015-08-11 13:19:14
 $sugar_config = array (
   'admin_access_control' => false,
   'admin_export_only' => false,
@@ -67,6 +67,7 @@ $sugar_config = array (
     'autofree' => false,
     'debug' => 0,
     'ssl' => false,
+    'collation' => 'utf8_general_ci',
   ),
   'default_action' => 'index',
   'default_charset' => 'UTF-8',
@@ -163,22 +164,22 @@ $sugar_config = array (
       'symbol' => '$',
     ),
   ),
-  'default_currency_iso4217' => 'USD',
-  'default_currency_name' => 'US Dollars',
+  'default_currency_iso4217' => 'RUB',
+  'default_currency_name' => 'Rubles',
   'default_currency_significant_digits' => 2,
-  'default_currency_symbol' => '$',
-  'default_date_format' => 'm/d/Y',
-  'default_decimal_seperator' => '.',
+  'default_currency_symbol' => '₽',
+  'default_date_format' => 'd.m.Y',
+  'default_decimal_seperator' => ',',
   'default_email_charset' => 'UTF-8',
   'default_email_client' => 'sugar',
   'default_email_editor' => 'html',
   'default_export_charset' => 'UTF-8',
   'default_language' => 'en_us',
-  'default_locale_name_format' => 's f l',
+  'default_locale_name_format' => 'f l',
   'default_max_tabs' => '7',
   'default_module' => 'Home',
   'default_navigation_paradigm' => 'gm',
-  'default_number_grouping_seperator' => ',',
+  'default_number_grouping_seperator' => '',
   'default_password' => '',
   'default_permissions' => 
   array (
@@ -192,7 +193,7 @@ $sugar_config = array (
   'default_swap_last_viewed' => false,
   'default_swap_shortcuts' => false,
   'default_theme' => 'Sugar5',
-  'default_time_format' => 'h:ia',
+  'default_time_format' => 'H:i',
   'default_user_is_admin' => false,
   'default_user_name' => '',
   'demoData' => 'no',
@@ -220,11 +221,12 @@ $sugar_config = array (
     'max_retries' => 5,
     'timeout' => 86400,
   ),
-  'js_custom_version' => '',
+  'js_custom_version' => 1,
   'js_lang_version' => 1,
   'languages' => 
   array (
     'en_us' => 'English (US)',
+    'ru_ru' => 'Русский - Russian',
   ),
   'large_scale_test' => false,
   'lead_conv_activity_opt' => 'donothing',
