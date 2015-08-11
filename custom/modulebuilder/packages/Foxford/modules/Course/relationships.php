@@ -35,4 +35,38 @@
  ********************************************************************************/
 
 $relationships = array (
+  'fox_course_contacts' => 
+  array (
+    'rhs_label' => 'Contacts',
+    'lhs_label' => 'Мои курсы',
+    'lhs_subpanel' => 'default',
+    'rhs_subpanel' => 'default',
+    'lhs_module' => 'fox_Course',
+    'rhs_module' => 'Contacts',
+    'relationship_type' => 'many-to-many',
+    'readonly' => false,
+    'deleted' => false,
+    'relationship_only' => false,
+    'for_activities' => false,
+    'is_custom' => false,
+    'from_studio' => false,
+    'relationship_name' => 'fox_course_contacts',
+  ),
+  'fox_course_contacts_1' => 
+  array (
+    'rhs_label' => 'Куплен пользователями',
+    'lhs_label' => 'Купленные курсы',
+    'lhs_subpanel' => 'default',
+    'rhs_subpanel' => 'default',
+    'lhs_module' => 'fox_Course',
+    'rhs_module' => 'Contacts',
+    'relationship_type' => 'many-to-many',
+    'readonly' => false,
+    'deleted' => false,
+    'relationship_only' => false,
+    'for_activities' => false,
+    'is_custom' => false,
+    'from_studio' => false,
+    'relationship_name' => 'fox_course_contacts_1',
+  ),
 );
