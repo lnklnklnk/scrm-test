@@ -60,9 +60,9 @@ $manifest = array (
   'icon' => '',
   'is_uninstallable' => true,
   'name' => 'Foxford',
-  'published_date' => '2015-08-11 15:03:47',
+  'published_date' => '2015-08-12 20:07:14',
   'type' => 'module',
-  'version' => 1439305432,
+  'version' => 1439410039,
   'remove_tables' => 'prompt',
 );
 
@@ -77,6 +77,13 @@ $installdefs = array (
       'class' => 'fox_Course',
       'path' => 'modules/fox_Course/fox_Course.php',
       'tab' => false,
+    ),
+    1 => 
+    array (
+      'module' => 'fox_Task',
+      'class' => 'fox_Task',
+      'path' => 'modules/fox_Task/fox_Task.php',
+      'tab' => true,
     ),
   ),
   'layoutdefs' => 
@@ -120,6 +127,11 @@ $installdefs = array (
     array (
       'from' => '<basepath>/SugarModules/modules/fox_Course',
       'to' => 'modules/fox_Course',
+    ),
+    1 => 
+    array (
+      'from' => '<basepath>/SugarModules/modules/fox_Task',
+      'to' => 'modules/fox_Task',
     ),
   ),
   'language' => 
