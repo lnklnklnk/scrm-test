@@ -39,7 +39,7 @@ if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 require_once('include/Dashlets/Dashlet.php');
 
 
-class fox_TaskContactsDistibution extends Dashlet {
+class fox_TaskContactsDistribution extends Dashlet {
 
     var $height = '200'; // height of the pad
 
@@ -56,7 +56,7 @@ class fox_TaskContactsDistibution extends Dashlet {
         $ss->assign('id', $this->id);
         $ss->assign('height', $this->height);
 
-        $str = $ss->fetch('modules/fox_Task/Dashlets/fox_TaskContactsDistibution/fox_TaskContactsDistibution.tpl');
+        $str = $ss->fetch('modules/fox_Task/Dashlets/fox_TaskContactsDistribution/fox_TaskContactsDistribution.tpl');
         return parent::display($this->dashletStrings['LBL_DBLCLICK_HELP']) . $str . '<br />'; // return parent::display for title and such
     }
 
