@@ -41,6 +41,30 @@
 *}
 
 
-<div id='foxford_{$id}'>
-<input type="button" value="{$getNewContactLbl}" onclick='ContactsDistribution.getContact(this, "{$id}")'/>
-</div>
+{literal}<script>
+	if(typeof ContactsDistribution == 'undefined') { // since the dashlet can be included multiple times a page, don't redefine these functions
+		ContactsDistribution = function() {
+			return {
+
+				/**
+				 * Called when the textarea is double clicked on
+				 */
+				getContact: function(divObj, id) {
+					ajaxStatus.showStatus('{/literal}{$gettingContactLbl}{literal}');
+					postData = 'to_pdf=1&module=fox_Task&action=CallMethodDashlet&method=getContact&id=' + id;
+					var cObj = YAHOO.util.Connect.asyncRequest('POST','index.php',
+							{success: ContactsDistribution.saved, failure: ContactsDistribution.saved}, postData);
+
+				},
+				/**
+				 * handle the response of the saveText method
+				 */
+				saved: function(data) {
+
+					ajaxStatus.showStatus('{/literal}{$saved}{literal}');
+					window.setTimeout('ajaxStatus.hideStatus()', 2000);
+				}
+			};
+		}();
+	}
+</script>{/literal}

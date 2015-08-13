@@ -46,7 +46,7 @@ class fox_TaskContactsDistribution extends Dashlet {
 
 	function fox_TaskContactsDistribution($id, $def) {
 		$this->loadLanguage('fox_TaskContactsDistribution','modules/fox_Task/Dashlets/');
-
+		$this->hasScript = true;  // dashlet has javascript attached to it
 
 		if(!empty($def['height'])) // set a default height if none is set
 			$this->height = $def['height'];
@@ -76,30 +76,27 @@ class fox_TaskContactsDistribution extends Dashlet {
         return parent::display($this->dashletStrings['LBL_DBLCLICK_HELP']) . $str . '<br />'; // return parent::display for title and such
     }
 
-    /**
-     * Displays the javascript for the dashlet
-     *
-     * @return string javascript to use with this dashlet
-     */
-
-    /**
-     * Displays the configuration form for the dashlet
-     *
-     * @return string html to display form
-     */
-
-    /**
-     * called to filter out $_REQUEST object when the user submits the configure dropdown
-     *
-     * @param array $req $_REQUEST
-     * @return array filtered options to save
-     */
+	/**
+	 * Displays the javascript for the dashlet
+	 *
+	 * @return string javascript to use with this dashlet
+	 */
+	function displayScript() {
+		$ss = new Sugar_Smarty();
+		$ss->assign('id', $this->id);
+		$ss->assign('gettingContactLbl', $this->dashletStrings['LBL_GETTING_CONTACT']);
+		$str = $ss->fetch('modules/fox_Task/Dashlets/fox_TaskContactsDistribution/fox_TaskContactsDistributionScript.tpl');
+		return $str; // return parent::display for title and such
+	}
 
 
-    /**
-     * Used to save text on textarea blur. Accessed via Home/CallMethodDashlet.php
-     * This is an example of how to to call a custom method via ajax
-     */
+
+	function getContact() {
+		$json = getJSONobj();
+		echo 'result = ' . $json->encode(array('id' => $_REQUEST['id'],'contactId'=>'dsds'));
+	}
+
+
 
 }
 

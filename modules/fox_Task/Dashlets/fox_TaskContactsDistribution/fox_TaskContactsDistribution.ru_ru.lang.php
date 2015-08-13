@@ -41,5 +41,6 @@ if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 $defaultText = "";
 $dashletStrings['fox_TaskContactsDistribution'] = array('LBL_TITLE'            => 'Foxford',
 	'LBL_GET_NEW_CONTACT'           => 'Взять контакт в работу',
+	'LBL_GETTING_CONTACT'           => 'Получение контакта',
 );
 ?>
