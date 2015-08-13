@@ -44,6 +44,19 @@ class fox_TaskContactsDistribution extends Dashlet {
     var $height = '200'; // height of the pad
 
 
+	function fox_TaskContactsDistribution($id, $def) {
+		$this->loadLanguage('fox_TaskContactsDistribution','modules/fox_Task/Dashlets/');
+
+
+		if(!empty($def['height'])) // set a default height if none is set
+			$this->height = $def['height'];
+
+
+		parent::Dashlet($id);
+
+		if(empty($def['title'])) $this->title = $this->dashletStrings['LBL_TITLE'];
+		else $this->title = $def['title'];
+	}
 
     /**
      * Displays the dashlet
@@ -51,10 +64,13 @@ class fox_TaskContactsDistribution extends Dashlet {
      * @return string html to display dashlet
      */
     function display() {
+
+
         $ss = new Sugar_Smarty();
 
         $ss->assign('id', $this->id);
         $ss->assign('height', $this->height);
+		$ss->assign('getNewContactLbl', $this->dashletStrings['LBL_GET_NEW_CONTACT']);
 
         $str = $ss->fetch('modules/fox_Task/Dashlets/fox_TaskContactsDistribution/fox_TaskContactsDistribution.tpl');
         return parent::display($this->dashletStrings['LBL_DBLCLICK_HELP']) . $str . '<br />'; // return parent::display for title and such

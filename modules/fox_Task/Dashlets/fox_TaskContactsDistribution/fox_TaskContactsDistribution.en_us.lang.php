@@ -1,5 +1,5 @@
-{*
-
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 /*********************************************************************************
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
@@ -38,9 +38,8 @@
 
 
 
-*}
-
-
-<div id='jotpad_{$id}'>
-<input type="button" value="{$getNewContactLbl}"/>
-</div>
+$defaultText = "";
+$dashletStrings['fox_TaskContactsDistribution'] = array('LBL_TITLE'            => 'Foxford',
+	'LBL_GET_NEW_CONTACT'           => 'Get new contact',
+);
+?>
