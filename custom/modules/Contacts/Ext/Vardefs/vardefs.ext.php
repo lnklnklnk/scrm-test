@@ -2,7 +2,7 @@
  //WARNING: The contents of this file are auto-generated
 
 
-// created: 2015-08-13 16:36:44
+// created: 2015-08-13 19:01:10
 $dictionary["Contact"]["fields"]["fox_course_contacts_1"] = array (
   'name' => 'fox_course_contacts_1',
   'type' => 'link',
@@ -14,7 +14,7 @@ $dictionary["Contact"]["fields"]["fox_course_contacts_1"] = array (
 );
 
 
-// created: 2015-08-13 16:36:44
+// created: 2015-08-13 19:01:10
 $dictionary["Contact"]["fields"]["fox_course_contacts"] = array (
   'name' => 'fox_course_contacts',
   'type' => 'link',
@@ -23,6 +23,19 @@ $dictionary["Contact"]["fields"]["fox_course_contacts"] = array (
   'module' => 'fox_Course',
   'bean_name' => 'fox_Course',
   'vname' => 'LBL_FOX_COURSE_CONTACTS_FROM_FOX_COURSE_TITLE',
+);
+
+
+// created: 2015-08-13 19:01:10
+$dictionary["Contact"]["fields"]["fox_usertask_contacts"] = array (
+  'name' => 'fox_usertask_contacts',
+  'type' => 'link',
+  'relationship' => 'fox_usertask_contacts',
+  'source' => 'non-db',
+  'module' => 'fox_UserTask',
+  'bean_name' => false,
+  'side' => 'right',
+  'vname' => 'LBL_FOX_USERTASK_CONTACTS_FROM_FOX_USERTASK_TITLE',
 );
 
 

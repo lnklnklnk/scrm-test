@@ -40,5 +40,6 @@
 
 $app_list_strings['moduleList']['fox_Course'] = 'Course';
 $app_list_strings['moduleList']['fox_Task'] = 'task';
+$app_list_strings['moduleList']['fox_UserTask'] = 'UserTask';
 
 ?>

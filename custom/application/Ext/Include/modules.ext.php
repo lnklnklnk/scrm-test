@@ -11,6 +11,11 @@ $modInvisList[] = 'fox_Course';
 $beanList['fox_Task'] = 'fox_Task';
 $beanFiles['fox_Task'] = 'modules/fox_Task/fox_Task.php';
 $moduleList[] = 'fox_Task';
+$beanList['fox_UserTask'] = 'fox_UserTask';
+$beanFiles['fox_UserTask'] = 'modules/fox_UserTask/fox_UserTask.php';
+$modules_exempt_from_availability_check['fox_UserTask'] = 'fox_UserTask';
+$report_include_modules['fox_UserTask'] = 'fox_UserTask';
+$modInvisList[] = 'fox_UserTask';
 
 
 ?>

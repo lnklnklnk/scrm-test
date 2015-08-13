@@ -60,9 +60,9 @@ $manifest = array (
   'icon' => '',
   'is_uninstallable' => true,
   'name' => 'Foxford',
-  'published_date' => '2015-08-13 14:36:38',
+  'published_date' => '2015-08-13 17:01:05',
   'type' => 'module',
-  'version' => 1439476604,
+  'version' => 1439485270,
   'remove_tables' => 'prompt',
 );
 
@@ -84,6 +84,13 @@ $installdefs = array (
       'class' => 'fox_Task',
       'path' => 'modules/fox_Task/fox_Task.php',
       'tab' => true,
+    ),
+    2 => 
+    array (
+      'module' => 'fox_UserTask',
+      'class' => 'fox_UserTask',
+      'path' => 'modules/fox_UserTask/fox_UserTask.php',
+      'tab' => false,
     ),
   ),
   'layoutdefs' => 
@@ -108,6 +115,11 @@ $installdefs = array (
       'from' => '<basepath>/SugarModules/relationships/layoutdefs/fox_course_contacts_fox_Course.php',
       'to_module' => 'fox_Course',
     ),
+    4 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/layoutdefs/fox_usertask_contacts_Contacts.php',
+      'to_module' => 'Contacts',
+    ),
   ),
   'relationships' => 
   array (
@@ -118,6 +130,10 @@ $installdefs = array (
     1 => 
     array (
       'meta_data' => '<basepath>/SugarModules/relationships/relationships/fox_course_contactsMetaData.php',
+    ),
+    2 => 
+    array (
+      'meta_data' => '<basepath>/SugarModules/relationships/relationships/fox_usertask_contactsMetaData.php',
     ),
   ),
   'image_dir' => '<basepath>/icons',
@@ -132,6 +148,11 @@ $installdefs = array (
     array (
       'from' => '<basepath>/SugarModules/modules/fox_Task',
       'to' => 'modules/fox_Task',
+    ),
+    2 => 
+    array (
+      'from' => '<basepath>/SugarModules/modules/fox_UserTask',
+      'to' => 'modules/fox_UserTask',
     ),
   ),
   'language' => 
@@ -186,6 +207,30 @@ $installdefs = array (
     ),
     8 => 
     array (
+      'from' => '<basepath>/SugarModules/relationships/language/fox_UserTask.php',
+      'to_module' => 'fox_UserTask',
+      'language' => 'en_us',
+    ),
+    9 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/fox_UserTask.php',
+      'to_module' => 'fox_UserTask',
+      'language' => 'ru_ru',
+    ),
+    10 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Contacts.php',
+      'to_module' => 'Contacts',
+      'language' => 'en_us',
+    ),
+    11 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Contacts.php',
+      'to_module' => 'Contacts',
+      'language' => 'ru_ru',
+    ),
+    12 => 
+    array (
       'from' => '<basepath>/SugarModules/language/application/en_us.lang.php',
       'to_module' => 'application',
       'language' => 'en_us',
@@ -212,6 +257,25 @@ $installdefs = array (
     array (
       'from' => '<basepath>/SugarModules/relationships/vardefs/fox_course_contacts_fox_Course.php',
       'to_module' => 'fox_Course',
+    ),
+    4 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/vardefs/fox_usertask_contacts_fox_UserTask.php',
+      'to_module' => 'fox_UserTask',
+    ),
+    5 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/vardefs/fox_usertask_contacts_Contacts.php',
+      'to_module' => 'Contacts',
+    ),
+  ),
+  'layoutfields' => 
+  array (
+    0 => 
+    array (
+      'additional_fields' => 
+      array (
+      ),
     ),
   ),
 );

@@ -92,8 +92,41 @@ class fox_TaskContactsDistribution extends Dashlet {
 
 
 	function getContact() {
+		$bean_task = BeanFactory::newBean('fox_Task');
+		$bean_contact = BeanFactory::newBean('Contacts');
+
+		$order_by = 'priority';
+		$where = 'deleted=0 and active=1 and start_datetime<NOW() and end_datetime>NOW()';
+
+		$fields = array(
+			'id',
+			'sql_query',
+		);
+
+		$sql = $bean_task->create_new_list_query($order_by, $where, $fields);
+
+		$result = $GLOBALS['db']->query($sql);
+		while($row = $GLOBALS['db']->fetchByAssoc($result) )
+		{
+
+
+
+			$contact_query = $bean_contact->create_new_list_query('', "id in ({$row['sql_query']})", array('id'));
+
+
+			echo $contact_query;
+
+			$result_contacts = $GLOBALS['db']->query($contact_query);
+
+			while($row_contacts = $GLOBALS['db']->fetchByAssoc($result_contacts)) {
+				$ids_array[] = $row_contacts['id'];
+			}
+
+		}
+
+
 		$json = getJSONobj();
-		echo 'result = ' . $json->encode(array('id' => $_REQUEST['id'],'contactId'=>'dsds'));
+		echo 'result = ' . $json->encode(array('id' => $_REQUEST['id'],'taskIds'=>$ids_array));
 	}
 
 

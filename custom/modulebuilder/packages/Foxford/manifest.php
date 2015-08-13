@@ -60,9 +60,9 @@ $manifest = array (
   'icon' => '',
   'is_uninstallable' => true,
   'name' => 'Foxford',
-  'published_date' => '2015-08-13 14:36:12',
+  'published_date' => '2015-08-13 17:00:49',
   'type' => 'module',
-  'version' => 1439476577,
+  'version' => 1439485254,
   'remove_tables' => 'prompt',
 );
 
