@@ -63,6 +63,11 @@ class fox_Task_sugar extends Basic {
 		var $assigned_user_id;
 		var $assigned_user_name;
 		var $assigned_user_link;
+		var $start_datetime;
+		var $end_datetime;
+		var $priority;
+		var $active;
+		var $sql_query;
 		function fox_Task_sugar(){	
 		parent::Basic();
 	}

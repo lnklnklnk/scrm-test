@@ -65,4 +65,9 @@ $mod_strings = array (
   'LBL_ACTIVITIES_SUBPANEL_TITLE' => 'Мероприятия',
   'LBL_FOX_TASK_SUBPANEL_TITLE' => 'task',
   'LBL_NEW_FORM_TITLE' => 'Новый task',
+  'LBL_START_DATETIME' => 'start datetime',
+  'LBL_END_DATETIME' => 'end datetime',
+  'LBL_PRIORITY' => 'priority',
+  'LBL_ACTIVE' => 'active',
+  'LBL_SQL_QUERY' => 'sql query',
 );
