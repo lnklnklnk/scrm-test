@@ -1,5 +1,5 @@
 <?php
- // created: 2015-08-13 19:33:40
+ // created: 2015-08-13 19:35:26
 $layout_defs["fox_Task"]["subpanel_setup"]['fox_usertask_fox_task'] = array (
   'order' => 100,
   'module' => 'fox_UserTask',
