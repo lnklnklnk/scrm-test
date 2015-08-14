@@ -92,6 +92,8 @@ class fox_TaskContactsDistribution extends Dashlet {
 
 
 	function getContact() {
+		global $current_user;
+
 		$bean_task = BeanFactory::newBean('fox_Task');
 		$bean_contact = BeanFactory::newBean('Contacts');
 
@@ -119,22 +121,50 @@ class fox_TaskContactsDistribution extends Dashlet {
 			where `fox_usertask_fox_taskfox_task_ida` ='{$row['id']}')
 			", array('id'));
 
-			echo $contact_query;
+			if($row['run_experiment']) {
+				$contact_query .= ' LIMIT 2';
+			} else {
+				$contact_query .= ' LIMIT 1';
+			}
+
+			//echo $contact_query;
+
 
 
 
 
 			$result_contacts = $GLOBALS['db']->query($contact_query);
 
-			while($row_contacts = $GLOBALS['db']->fetchByAssoc($result_contacts)) {
-				$ids_array[] = $row_contacts['id'];
+
+			if($row_contact = $GLOBALS['db']->fetchByAssoc($result_contacts)) {
+				$assigned_contact_id = $row_contact['id'];
+
+				$assigned_contact_bean = BeanFactory::getBean('Contacts', $assigned_contact_id);
+				$assigned_contact_bean->assigned_user_id = $current_user->id;
+				
+				$assigned_contact_bean->save();
+
+				/*
+				меняем статус контакта
+				ассайним его
+				добавляем юзер-таск
+				*/
 			}
+
+			if($row['run_experiment'] and $row_contact = $GLOBALS['db']->fetchByAssoc($result_contacts)) {
+				/*
+				добавляем юзер-таск
+				*/
+
+
+			}
+
 
 		}
 
 
 		$json = getJSONobj();
-		echo 'result = ' . $json->encode(array('id' => $_REQUEST['id'],'taskIds'=>$ids_array));
+		echo 'result = ' . $json->encode(array('id' => $_REQUEST['id'],'contact_id'=>$assigned_contact_id));
 	}
 
 
