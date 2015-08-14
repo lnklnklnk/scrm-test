@@ -101,6 +101,7 @@ class fox_TaskContactsDistribution extends Dashlet {
 		$fields = array(
 			'id',
 			'sql_query',
+			'run_experiment'
 		);
 
 		$sql = $bean_task->create_new_list_query($order_by, $where, $fields);

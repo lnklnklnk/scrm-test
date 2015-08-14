@@ -68,6 +68,7 @@ class fox_Task_sugar extends Basic {
 		var $priority;
 		var $active;
 		var $sql_query;
+		var $run_experiment;
 		function fox_Task_sugar(){	
 		parent::Basic();
 	}

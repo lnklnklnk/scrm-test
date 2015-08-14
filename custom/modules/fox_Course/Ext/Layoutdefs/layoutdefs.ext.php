@@ -2,7 +2,7 @@
  //WARNING: The contents of this file are auto-generated
 
 
- // created: 2015-08-13 19:01:10
+ // created: 2015-08-14 11:27:13
 $layout_defs["fox_Course"]["subpanel_setup"]['fox_course_contacts_1'] = array (
   'order' => 100,
   'module' => 'Contacts',
@@ -26,7 +26,7 @@ $layout_defs["fox_Course"]["subpanel_setup"]['fox_course_contacts_1'] = array (
 );
 
 
- // created: 2015-08-13 19:01:10
+ // created: 2015-08-14 11:27:13
 $layout_defs["fox_Course"]["subpanel_setup"]['fox_course_contacts'] = array (
   'order' => 100,
   'module' => 'Contacts',

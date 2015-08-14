@@ -16,4 +16,9 @@ include('custom/metadata/fox_course_contacts_1MetaData.php');
 include('custom/metadata/fox_usertask_contactsMetaData.php');
 
 
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/fox_usertask_fox_taskMetaData.php');
+
+
 ?>

@@ -70,4 +70,5 @@ $mod_strings = array (
   'LBL_PRIORITY' => 'priority',
   'LBL_ACTIVE' => 'active',
   'LBL_SQL_QUERY' => 'sql query',
+  'LBL_RUN_EXPERIMENT' => 'run experiment',
 );

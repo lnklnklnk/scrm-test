@@ -38,7 +38,11 @@ array (
         0 => 
         array (
           0 => 'name',
-          1 => 'assigned_user_name',
+          1 => 
+          array (
+            'name' => 'run_experiment',
+            'label' => 'LBL_RUN_EXPERIMENT',
+          ),
         ),
         1 => 
         array (

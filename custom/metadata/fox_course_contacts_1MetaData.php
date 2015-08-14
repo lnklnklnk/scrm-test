@@ -1,5 +1,5 @@
 <?php
-// created: 2015-08-13 19:01:10
+// created: 2015-08-14 11:27:13
 $dictionary["fox_course_contacts_1"] = array (
   'true_relationship_type' => 'many-to-many',
   'relationships' => 

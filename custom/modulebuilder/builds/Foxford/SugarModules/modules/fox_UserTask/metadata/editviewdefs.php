@@ -38,6 +38,13 @@ array (
             'name' => 'fox_usertask_contacts_name',
           ),
         ),
+        2 => 
+        array (
+          0 => 
+          array (
+            'name' => 'fox_usertask_fox_task_name',
+          ),
+        ),
       ),
     ),
   ),
