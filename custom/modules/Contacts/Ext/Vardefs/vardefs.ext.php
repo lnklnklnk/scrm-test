@@ -49,6 +49,11 @@ $dictionary['Contact']['fields']['registered_at_c']['labelValue']='registered at
 
  
 
+ // created: 2015-08-14 12:45:39
+$dictionary['Contact']['fields']['status_c']['labelValue']='status';
+
+ 
+
  // created: 2015-08-11 13:32:42
 $dictionary['Contact']['fields']['timezone_c']['labelValue']='timezone';
 

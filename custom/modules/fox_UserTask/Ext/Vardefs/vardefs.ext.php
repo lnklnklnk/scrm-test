@@ -74,4 +74,9 @@ $dictionary["fox_UserTask"]["fields"]["fox_usertask_fox_taskfox_task_ida"] = arr
   'vname' => 'LBL_FOX_USERTASK_FOX_TASK_FROM_FOX_USERTASK_TITLE',
 );
 
+
+ // created: 2015-08-14 13:24:54
+$dictionary['fox_UserTask']['fields']['experimental_c']['labelValue']='experimental';
+
+ 
 ?>

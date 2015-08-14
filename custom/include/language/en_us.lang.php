@@ -10,3 +10,7 @@ $GLOBALS['app_list_strings']['grade_list']=array (
   5 => '5',
   0 => 'graduate',
 );
+$GLOBALS['app_list_strings']['statuses_list']=array (
+  0 => 'Free',
+  1 => 'In work',
+);

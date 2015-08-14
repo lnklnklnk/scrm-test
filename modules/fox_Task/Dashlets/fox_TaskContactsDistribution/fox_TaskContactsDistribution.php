@@ -103,7 +103,8 @@ class fox_TaskContactsDistribution extends Dashlet {
 		$fields = array(
 			'id',
 			'sql_query',
-			'run_experiment'
+			'run_experiment',
+			'name'
 		);
 
 		$sql = $bean_task->create_new_list_query($order_by, $where, $fields);
@@ -141,12 +142,27 @@ class fox_TaskContactsDistribution extends Dashlet {
 
 				$assigned_contact_bean = BeanFactory::getBean('Contacts', $assigned_contact_id);
 				$assigned_contact_bean->assigned_user_id = $current_user->id;
-				
-				$assigned_contact_bean->save();
+				$assigned_contact_bean->status_c=1;
+
+
+				#$assigned_contact_bean->save();
+
+				$bean = BeanFactory::newBean('fox_UserTask');
+
+
+				$bean->name = $assigned_contact_bean->name .' / '.$row['name'];
+				$bean->save();
+				$bean->load_relationship('fox_usertask_contacts');
+				$bean->fox_usertask_contacts->add($assigned_contact_id);
+
+				$bean->load_relationship('fox_usertask_fox_task');
+				$bean->fox_usertask_fox_task->add($row['id']);
+
+
+
+
 
 				/*
-				меняем статус контакта
-				ассайним его
 				добавляем юзер-таск
 				*/
 			}
