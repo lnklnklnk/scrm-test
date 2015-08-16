@@ -119,6 +119,7 @@ class fox_TaskContactsDistribution extends Dashlet {
 			and id not in (select fox_usertask_contactscontacts_ida from fox_usertask_fox_task_c
 			JOIN fox_usertask_contacts_c on
 			fox_usertask_fox_task_c.`fox_usertask_fox_taskfox_usertask_idb` = fox_usertask_contacts_c.fox_usertask_contactsfox_usertask_idb
+			JOIN fox_usertask on fox_usertask.id = fox_usertask_fox_taskfox_usertask_idb and fox_usertask.deleted=0
 			where `fox_usertask_fox_taskfox_task_ida` ='{$row['id']}')
 			", array('id'));
 
@@ -128,7 +129,7 @@ class fox_TaskContactsDistribution extends Dashlet {
 				$contact_query .= ' LIMIT 1';
 			}
 
-			//echo $contact_query;
+			
 
 
 
@@ -147,16 +148,16 @@ class fox_TaskContactsDistribution extends Dashlet {
 
 				#$assigned_contact_bean->save();
 
-				$bean = BeanFactory::newBean('fox_UserTask');
+				$userTask = BeanFactory::newBean('fox_UserTask');
 
 
-				$bean->name = $assigned_contact_bean->name .' / '.$row['name'];
-				$bean->save();
-				$bean->load_relationship('fox_usertask_contacts');
-				$bean->fox_usertask_contacts->add($assigned_contact_id);
+				$userTask->name = $assigned_contact_bean->name .' / '.$row['name'];
+				$userTask->save();
+				$userTask->load_relationship('fox_usertask_contacts');
+				$userTask->fox_usertask_contacts->add($assigned_contact_id);
 
-				$bean->load_relationship('fox_usertask_fox_task');
-				$bean->fox_usertask_fox_task->add($row['id']);
+				$userTask->load_relationship('fox_usertask_fox_task');
+				$userTask->fox_usertask_fox_task->add($row['id']);
 
 
 
@@ -168,9 +169,20 @@ class fox_TaskContactsDistribution extends Dashlet {
 			}
 
 			if($row['run_experiment'] and $row_contact = $GLOBALS['db']->fetchByAssoc($result_contacts)) {
-				/*
-				добавляем юзер-таск
-				*/
+				$test_contact_id = $row_contact['id'];
+
+				$userTask = BeanFactory::newBean('fox_UserTask');
+
+
+				$userTask->name = $assigned_contact_bean->name .' / '.$row['name'];
+				$userTask->experimental_c=1;
+
+				$userTask->save();
+				$userTask->load_relationship('fox_usertask_contacts');
+				$userTask->fox_usertask_contacts->add($test_contact_id);
+
+				$userTask->load_relationship('fox_usertask_fox_task');
+				$userTask->fox_usertask_fox_task->add($row['id']);
 
 
 			}

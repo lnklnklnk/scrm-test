@@ -25,4 +25,9 @@ $dictionary["fox_Course"]["fields"]["fox_course_contacts"] = array (
   'vname' => 'LBL_FOX_COURSE_CONTACTS_FROM_CONTACTS_TITLE',
 );
 
+
+ // created: 2015-08-16 14:02:57
+$dictionary['fox_Course']['fields']['foxford_course_id_c']['labelValue']='foxford course id';
+
+ 
 ?>
