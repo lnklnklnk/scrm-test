@@ -1,5 +1,5 @@
 <?php
-// created: 2015-08-14 11:27:13
+// created: 2015-08-16 15:17:32
 $dictionary["Contact"]["fields"]["fox_usertask_contacts"] = array (
   'name' => 'fox_usertask_contacts',
   'type' => 'link',

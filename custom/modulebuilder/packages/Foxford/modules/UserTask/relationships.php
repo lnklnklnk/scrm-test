@@ -67,4 +67,20 @@ $relationships = array (
     'from_studio' => false,
     'relationship_name' => 'fox_usertask_fox_task',
   ),
+  'fox_usertask_users' => 
+  array (
+    'rhs_label' => 'Users',
+    'lhs_label' => 'Assigned user',
+    'lhs_subpanel' => 'default',
+    'lhs_module' => 'fox_UserTask',
+    'rhs_module' => 'Users',
+    'relationship_type' => 'many-to-one',
+    'readonly' => false,
+    'deleted' => false,
+    'relationship_only' => false,
+    'for_activities' => false,
+    'is_custom' => false,
+    'from_studio' => false,
+    'relationship_name' => 'fox_usertask_users',
+  ),
 );

@@ -2,7 +2,7 @@
  //WARNING: The contents of this file are auto-generated
 
 
-// created: 2015-08-14 11:27:13
+// created: 2015-08-16 15:17:32
 $dictionary["fox_UserTask"]["fields"]["fox_usertask_contacts"] = array (
   'name' => 'fox_usertask_contacts',
   'type' => 'link',
@@ -41,7 +41,7 @@ $dictionary["fox_UserTask"]["fields"]["fox_usertask_contactscontacts_ida"] = arr
 );
 
 
-// created: 2015-08-14 11:27:13
+// created: 2015-08-16 15:17:32
 $dictionary["fox_UserTask"]["fields"]["fox_usertask_fox_task"] = array (
   'name' => 'fox_usertask_fox_task',
   'type' => 'link',
@@ -75,8 +75,37 @@ $dictionary["fox_UserTask"]["fields"]["fox_usertask_fox_taskfox_task_ida"] = arr
 );
 
 
- // created: 2015-08-14 13:24:54
-$dictionary['fox_UserTask']['fields']['experimental_c']['labelValue']='experimental';
+// created: 2015-08-16 15:17:32
+$dictionary["fox_UserTask"]["fields"]["fox_usertask_users"] = array (
+  'name' => 'fox_usertask_users',
+  'type' => 'link',
+  'relationship' => 'fox_usertask_users',
+  'source' => 'non-db',
+  'module' => 'Users',
+  'bean_name' => 'User',
+  'vname' => 'LBL_FOX_USERTASK_USERS_FROM_USERS_TITLE',
+  'id_name' => 'fox_usertask_usersusers_ida',
+);
+$dictionary["fox_UserTask"]["fields"]["fox_usertask_users_name"] = array (
+  'name' => 'fox_usertask_users_name',
+  'type' => 'relate',
+  'source' => 'non-db',
+  'vname' => 'LBL_FOX_USERTASK_USERS_FROM_USERS_TITLE',
+  'save' => true,
+  'id_name' => 'fox_usertask_usersusers_ida',
+  'link' => 'fox_usertask_users',
+  'table' => 'users',
+  'module' => 'Users',
+  'rname' => 'name',
+);
+$dictionary["fox_UserTask"]["fields"]["fox_usertask_usersusers_ida"] = array (
+  'name' => 'fox_usertask_usersusers_ida',
+  'type' => 'link',
+  'relationship' => 'fox_usertask_users',
+  'source' => 'non-db',
+  'reportable' => false,
+  'side' => 'right',
+  'vname' => 'LBL_FOX_USERTASK_USERS_FROM_FOX_USERTASK_TITLE',
+);
 
- 
 ?>

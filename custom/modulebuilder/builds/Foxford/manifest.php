@@ -60,9 +60,9 @@ $manifest = array (
   'icon' => '',
   'is_uninstallable' => true,
   'name' => 'Foxford',
-  'published_date' => '2015-08-14 09:27:08',
+  'published_date' => '2015-08-16 13:17:27',
   'type' => 'module',
-  'version' => 1439544433,
+  'version' => 1439731052,
   'remove_tables' => 'prompt',
 );
 
@@ -125,6 +125,11 @@ $installdefs = array (
       'from' => '<basepath>/SugarModules/relationships/layoutdefs/fox_usertask_fox_task_fox_Task.php',
       'to_module' => 'fox_Task',
     ),
+    6 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/layoutdefs/fox_usertask_users_Users.php',
+      'to_module' => 'Users',
+    ),
   ),
   'relationships' => 
   array (
@@ -143,6 +148,10 @@ $installdefs = array (
     3 => 
     array (
       'meta_data' => '<basepath>/SugarModules/relationships/relationships/fox_usertask_fox_taskMetaData.php',
+    ),
+    4 => 
+    array (
+      'meta_data' => '<basepath>/SugarModules/relationships/relationships/fox_usertask_usersMetaData.php',
     ),
   ),
   'image_dir' => '<basepath>/icons',
@@ -264,6 +273,30 @@ $installdefs = array (
     ),
     16 => 
     array (
+      'from' => '<basepath>/SugarModules/relationships/language/fox_UserTask.php',
+      'to_module' => 'fox_UserTask',
+      'language' => 'en_us',
+    ),
+    17 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/fox_UserTask.php',
+      'to_module' => 'fox_UserTask',
+      'language' => 'ru_ru',
+    ),
+    18 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Users.php',
+      'to_module' => 'Users',
+      'language' => 'en_us',
+    ),
+    19 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/language/Users.php',
+      'to_module' => 'Users',
+      'language' => 'ru_ru',
+    ),
+    20 => 
+    array (
       'from' => '<basepath>/SugarModules/language/application/en_us.lang.php',
       'to_module' => 'application',
       'language' => 'en_us',
@@ -311,6 +344,16 @@ $installdefs = array (
       'from' => '<basepath>/SugarModules/relationships/vardefs/fox_usertask_fox_task_fox_Task.php',
       'to_module' => 'fox_Task',
     ),
+    8 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/vardefs/fox_usertask_users_fox_UserTask.php',
+      'to_module' => 'fox_UserTask',
+    ),
+    9 => 
+    array (
+      'from' => '<basepath>/SugarModules/relationships/vardefs/fox_usertask_users_Users.php',
+      'to_module' => 'Users',
+    ),
   ),
   'layoutfields' => 
   array (
@@ -321,6 +364,12 @@ $installdefs = array (
       ),
     ),
     1 => 
+    array (
+      'additional_fields' => 
+      array (
+      ),
+    ),
+    2 => 
     array (
       'additional_fields' => 
       array (

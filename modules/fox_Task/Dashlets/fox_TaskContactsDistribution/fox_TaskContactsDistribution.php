@@ -129,7 +129,7 @@ class fox_TaskContactsDistribution extends Dashlet {
 				$contact_query .= ' LIMIT 1';
 			}
 
-			
+
 
 
 

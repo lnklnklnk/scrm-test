@@ -44,6 +44,10 @@ array (
           array (
             'name' => 'fox_usertask_fox_task_name',
           ),
+          1 => 
+          array (
+            'name' => 'fox_usertask_users_name',
+          ),
         ),
       ),
     ),
