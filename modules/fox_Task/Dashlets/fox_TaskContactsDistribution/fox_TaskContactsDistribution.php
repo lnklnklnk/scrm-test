@@ -159,6 +159,8 @@ class fox_TaskContactsDistribution extends Dashlet {
 				$userTask->load_relationship('fox_usertask_fox_task');
 				$userTask->fox_usertask_fox_task->add($row['id']);
 
+				$userTask->load_relationship('fox_usertask_users');
+				$userTask->fox_usertask_users->add($current_user->id);
 
 
 
@@ -171,10 +173,12 @@ class fox_TaskContactsDistribution extends Dashlet {
 			if($row['run_experiment'] and $row_contact = $GLOBALS['db']->fetchByAssoc($result_contacts)) {
 				$test_contact_id = $row_contact['id'];
 
+				$test_contact_bean = BeanFactory::getBean('Contacts', $test_contact_id);
+
 				$userTask = BeanFactory::newBean('fox_UserTask');
 
 
-				$userTask->name = $assigned_contact_bean->name .' / '.$row['name'];
+				$userTask->name = $test_contact_bean->name .' / '.$row['name'];
 				$userTask->experimental_c=1;
 
 				$userTask->save();
