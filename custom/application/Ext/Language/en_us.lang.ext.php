@@ -2,6 +2,15 @@
  //WARNING: The contents of this file are auto-generated
 
 
+
+$app_list_strings['call_status_dom']=array (
+  'Planned' => 'Planned',
+  'Held' => 'Held',
+  'Not Held' => 'Not Held',
+  'Missed' => 'Missed',
+  'In Limbo' => 'In Limbo',
+);
+
 /*********************************************************************************
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
