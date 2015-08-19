@@ -65,4 +65,6 @@ $mod_strings = array (
   'LBL_ACTIVITIES_SUBPANEL_TITLE' => 'Мероприятия',
   'LBL_FOX_USERTASK_SUBPANEL_TITLE' => 'UserTask',
   'LBL_NEW_FORM_TITLE' => 'Новый UserTask',
+  'LBL_SCRIPT' => 'script',
+  'LBL_EXPERIMENTAL' => 'experimental',
 );

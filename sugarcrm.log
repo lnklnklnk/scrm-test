@@ -1634,3 +1634,22 @@ Tue Aug 18 16:50:06 2015 [14914][1][FATAL]  Query Failed:  SELECT * FROM asteris
 Tue Aug 18 16:50:06 2015 [14914][1][FATAL] MySQL error 1054: Unknown column 'timestampCall' in 'where clause'
 Tue Aug 18 16:50:07 2015 [21635][1][FATAL]  Query Failed:  SELECT * FROM asterisk_log WHERE "2015-08-18 15:50:07" < timestampCall AND (uistate IS NULL OR uistate != "Closed") AND (callstate != 'NeedID') AND ( channel LIKE 'SIP/101%' OR channel LIKE 'Local%101%'): MySQL error 1054: Unknown column 'timestampCall' in 'where clause'
 Tue Aug 18 16:50:07 2015 [21635][1][FATAL] MySQL error 1054: Unknown column 'timestampCall' in 'where clause'
+Wed Aug 19 14:28:54 2015 [32022][1][FATAL] Error: Module UserTask does not exist.
+Wed Aug 19 14:31:12 2015 [30920][1][FATAL] project_resource for projects_contacts_resources failed to load
+
+Wed Aug 19 14:31:12 2015 [30920][1][FATAL] error loading relationship project_resource
+Wed Aug 19 14:31:12 2015 [30920][1][FATAL] project_resource for projects_contacts_resources failed to load
+
+Wed Aug 19 14:31:12 2015 [30920][1][FATAL] error loading relationship project_resource
+Wed Aug 19 14:31:12 2015 [30920][1][FATAL] project_resource for projects_contacts_resources failed to load
+
+Wed Aug 19 14:31:12 2015 [30920][1][FATAL] error loading relationship project_resource
+Wed Aug 19 14:31:12 2015 [30920][1][FATAL] project_resource for projects_contacts_resources failed to load
+
+Wed Aug 19 14:31:12 2015 [30920][1][FATAL] error loading relationship project_resource
+Wed Aug 19 14:44:06 2015 [34088][-none-][FATAL] SECURITY: User authentication for alexander.eroshkin@gmail.com failed
+Wed Aug 19 14:44:06 2015 [34088][-none-][FATAL] FAILED LOGIN:attempts[1] - alexander.eroshkin@gmail.com
+Wed Aug 19 14:44:21 2015 [34088][-none-][FATAL] SECURITY: User authentication for alexander.eroshkin@gmail.com failed
+Wed Aug 19 14:44:21 2015 [34088][-none-][FATAL] FAILED LOGIN:attempts[2] - alexander.eroshkin@gmail.com
+Wed Aug 19 14:47:16 2015 [24279][-none-][FATAL] SECURITY: User authentication for alexander.eroshkin@gmail.com failed
+Wed Aug 19 14:47:16 2015 [24279][-none-][FATAL] FAILED LOGIN:attempts[3] - alexander.eroshkin@gmail.com

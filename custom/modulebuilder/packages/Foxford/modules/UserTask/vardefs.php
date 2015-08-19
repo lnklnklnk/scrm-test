@@ -37,6 +37,50 @@
 $vardefs = array (
   'fields' => 
   array (
+    'script' => 
+    array (
+      'required' => false,
+      'name' => 'script',
+      'vname' => 'LBL_SCRIPT',
+      'type' => 'url',
+      'massupdate' => 0,
+      'no_default' => false,
+      'comments' => '',
+      'help' => '',
+      'importable' => 'true',
+      'duplicate_merge' => 'disabled',
+      'duplicate_merge_dom_value' => '0',
+      'audited' => false,
+      'reportable' => true,
+      'unified_search' => false,
+      'merge_filter' => 'disabled',
+      'len' => '255',
+      'size' => '20',
+      'dbType' => 'varchar',
+      'gen' => '',
+      'link_target' => '_self',
+    ),
+    'experimental' => 
+    array (
+      'required' => false,
+      'name' => 'experimental',
+      'vname' => 'LBL_EXPERIMENTAL',
+      'type' => 'bool',
+      'massupdate' => 0,
+      'default' => '0',
+      'no_default' => false,
+      'comments' => '',
+      'help' => '',
+      'importable' => 'true',
+      'duplicate_merge' => 'disabled',
+      'duplicate_merge_dom_value' => '0',
+      'audited' => false,
+      'reportable' => true,
+      'unified_search' => false,
+      'merge_filter' => 'disabled',
+      'len' => '255',
+      'size' => '20',
+    ),
   ),
   'relationships' => 
   array (

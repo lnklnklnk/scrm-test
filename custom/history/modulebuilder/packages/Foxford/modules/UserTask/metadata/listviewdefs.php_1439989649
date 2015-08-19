@@ -1,5 +1,5 @@
-{*
-
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 /*********************************************************************************
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
@@ -38,43 +38,19 @@
 
 
 
-*}
-
-
-{literal}<script>
-	if(typeof ContactsDistribution == 'undefined') { // since the dashlet can be included multiple times a page, don't redefine these functions
-		ContactsDistribution = function() {
-			return {
-
-				/**
-				 * Called when the textarea is double clicked on
-				 */
-				getContact: function(divObj, id) {
-					ajaxStatus.showStatus('{/literal}{$gettingContactLbl}{literal}');
-					postData = 'to_pdf=1&module=fox_Task&action=CallMethodDashlet&method=getContact&id=' + id;
-					var cObj = YAHOO.util.Connect.asyncRequest('POST','index.php',
-							{success: ContactsDistribution.saved, failure: ContactsDistribution.saved}, postData);
-
-				},
-				/**
-				 * handle the response of the saveText method
-				 */
-				saved: function(data) {
-					eval(data.responseText);
-
-
-
-					if(result.contact_id == null) {
-						ajaxStatus.showStatus('{/literal}Нет подходящего контакта{literal}');
-						window.setTimeout('ajaxStatus.hideStatus()', 2000);
-					} else {
-						//ajaxStatus.showStatus('{/literal}Контакт открывается{literal}');
-						//ajaxStatus.hide();
-						window.location =
-						"/index.php?module=Contacts&action=DetailView&record="+result.contact_id;
-					}
-				}
-			};
-		}();
-	}
-</script>{/literal}
+$module_name = 'fox_UserTask';
+$listViewDefs[$module_name] = array(
+	'NAME' => array(
+		'width' => '32', 
+		'label' => 'LBL_NAME', 
+		'default' => true,
+        'link' => true),         
+	'ASSIGNED_USER_NAME' => array(
+		'width' => '9', 
+		'label' => 'LBL_ASSIGNED_TO_NAME',
+		'module' => 'Employees',
+        'id' => 'ASSIGNED_USER_ID',
+        'default' => true),
+	
+);
+?>

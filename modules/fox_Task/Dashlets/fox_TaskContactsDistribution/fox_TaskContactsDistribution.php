@@ -104,7 +104,8 @@ class fox_TaskContactsDistribution extends Dashlet {
 			'id',
 			'sql_query',
 			'run_experiment',
-			'name'
+			'name',
+			'script'
 		);
 
 		$sql = $bean_task->create_new_list_query($order_by, $where, $fields);
@@ -115,12 +116,13 @@ class fox_TaskContactsDistribution extends Dashlet {
 
 
 
-			$contact_query = $bean_contact->create_new_list_query('', "id in ({$row['sql_query']})
+			$contact_query = $bean_contact->create_new_list_query('first_name', "id in ({$row['sql_query']})
 			and id not in (select fox_usertask_contactscontacts_ida from fox_usertask_fox_task_c
 			JOIN fox_usertask_contacts_c on
 			fox_usertask_fox_task_c.`fox_usertask_fox_taskfox_usertask_idb` = fox_usertask_contacts_c.fox_usertask_contactsfox_usertask_idb
 			JOIN fox_usertask on fox_usertask.id = fox_usertask_fox_taskfox_usertask_idb and fox_usertask.deleted=0
 			where `fox_usertask_fox_taskfox_task_ida` ='{$row['id']}')
+
 			", array('id'));
 
 			if($row['run_experiment']) {
@@ -146,7 +148,7 @@ class fox_TaskContactsDistribution extends Dashlet {
 				$assigned_contact_bean->status_c=1;
 
 
-				#$assigned_contact_bean->save();
+				$assigned_contact_bean->save();
 
 				$userTask = BeanFactory::newBean('fox_UserTask');
 

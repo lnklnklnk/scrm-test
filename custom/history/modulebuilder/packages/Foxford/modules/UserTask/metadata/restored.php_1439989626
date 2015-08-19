@@ -1,6 +1,6 @@
 <?php
-$module_name='fox_UserTask';
-$subpanel_layout = array (
+// created: 2015-08-19 15:07:06
+$layout_defs = array (
   'top_buttons' => 
   array (
     0 => 
@@ -21,14 +21,11 @@ $subpanel_layout = array (
       'vname' => 'LBL_NAME',
       'widget_class' => 'SubPanelDetailViewLink',
       'width' => '45%',
-      'default' => true,
     ),
-    'script' => 
+    'date_modified' => 
     array (
-      'type' => 'url',
-      'vname' => 'LBL_SCRIPT',
-      'width' => '10%',
-      'default' => true,
+      'vname' => 'LBL_DATE_MODIFIED',
+      'width' => '45%',
     ),
     'edit_button' => 
     array (
@@ -36,7 +33,6 @@ $subpanel_layout = array (
       'widget_class' => 'SubPanelEditButton',
       'module' => 'fox_UserTask',
       'width' => '4%',
-      'default' => true,
     ),
     'remove_button' => 
     array (
@@ -44,7 +40,6 @@ $subpanel_layout = array (
       'widget_class' => 'SubPanelRemoveButton',
       'module' => 'fox_UserTask',
       'width' => '5%',
-      'default' => true,
     ),
   ),
 );
