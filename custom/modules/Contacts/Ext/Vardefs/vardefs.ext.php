@@ -2,7 +2,7 @@
  //WARNING: The contents of this file are auto-generated
 
 
-// created: 2015-08-16 15:17:32
+// created: 2015-08-19 16:13:21
 $dictionary["Contact"]["fields"]["fox_course_contacts_1"] = array (
   'name' => 'fox_course_contacts_1',
   'type' => 'link',
@@ -14,7 +14,7 @@ $dictionary["Contact"]["fields"]["fox_course_contacts_1"] = array (
 );
 
 
-// created: 2015-08-16 15:17:32
+// created: 2015-08-19 16:13:21
 $dictionary["Contact"]["fields"]["fox_course_contacts"] = array (
   'name' => 'fox_course_contacts',
   'type' => 'link',
@@ -26,7 +26,7 @@ $dictionary["Contact"]["fields"]["fox_course_contacts"] = array (
 );
 
 
-// created: 2015-08-16 15:17:32
+// created: 2015-08-19 16:13:22
 $dictionary["Contact"]["fields"]["fox_usertask_contacts"] = array (
   'name' => 'fox_usertask_contacts',
   'type' => 'link',

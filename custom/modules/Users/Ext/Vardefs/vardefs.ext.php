@@ -2,7 +2,7 @@
  //WARNING: The contents of this file are auto-generated
 
 
-// created: 2015-08-16 15:17:32
+// created: 2015-08-19 16:13:22
 $dictionary["User"]["fields"]["fox_usertask_users"] = array (
   'name' => 'fox_usertask_users',
   'type' => 'link',

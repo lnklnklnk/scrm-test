@@ -1653,3 +1653,21 @@ Wed Aug 19 14:44:21 2015 [34088][-none-][FATAL] SECURITY: User authentication fo
 Wed Aug 19 14:44:21 2015 [34088][-none-][FATAL] FAILED LOGIN:attempts[2] - alexander.eroshkin@gmail.com
 Wed Aug 19 14:47:16 2015 [24279][-none-][FATAL] SECURITY: User authentication for alexander.eroshkin@gmail.com failed
 Wed Aug 19 14:47:16 2015 [24279][-none-][FATAL] FAILED LOGIN:attempts[3] - alexander.eroshkin@gmail.com
+Wed Aug 19 16:14:14 2015 [24279][1][FATAL] Error inserting into table: fox_task: Query Failed: INSERT INTO fox_task (id,name,date_entered,date_modified,modified_user_id,created_by,description,deleted,start_datetime,end_datetime,active,sql_query,run_experiment,script)
+					VALUES ('4c5fa032-5bba-a42e-b502-55d48f509199','Задача 1','2015-08-19 14:14:09','2015-08-19 14:14:09','1','1','',0,'2015-08-18 07:00:00','2015-08-25 07:00:00',1,'',0,'https://docs.google.com/document/d/1qR876ZLL7MksBRP7bBPTiH99KG1CM1Jm5YKzukTPdpk/edit'): MySQL error 1054: Unknown column 'script' in 'field list'
+Wed Aug 19 16:16:58 2015 [35660][1][FATAL] Error inserting into table: fox_task: Query Failed: INSERT INTO fox_task (id,name,date_entered,date_modified,modified_user_id,created_by,description,deleted,start_datetime,end_datetime,active,sql_query,run_experiment,script)
+					VALUES ('a17c3787-bfaf-f7d6-c52f-55d48fcc6f18','Задача 1','2015-08-19 14:16:53','2015-08-19 14:16:53','1','1','',0,'2015-08-18 07:00:00','2015-08-25 07:00:00',1,'',0,'https://docs.google.com/document/d/1qR876ZLL7MksBRP7bBPTiH99KG1CM1Jm5YKzukTPdpk/edit'): MySQL error 1054: Unknown column 'script' in 'field list'
+Wed Aug 19 16:17:14 2015 [35241][1][FATAL] Error inserting into table: fox_task: Query Failed: INSERT INTO fox_task (id,name,date_entered,date_modified,modified_user_id,created_by,description,deleted,start_datetime,end_datetime,active,sql_query,run_experiment,script)
+					VALUES ('66a09905-4c2d-1257-1c92-55d48f169c5c','Задача 1','2015-08-19 14:17:09','2015-08-19 14:17:09','1','1','',0,'2015-08-18 07:00:00','2015-08-25 07:00:00',1,'',0,'https://docs.google.com/document/d/1qR876ZLL7MksBRP7bBPTiH99KG1CM1Jm5YKzukTPdpk/edit'): MySQL error 1054: Unknown column 'script' in 'field list'
+Wed Aug 19 16:18:49 2015 [34437][-none-][FATAL] SECURITY: User authentication for Сотрудник failed
+Wed Aug 19 16:18:49 2015 [34437][-none-][FATAL] FAILED LOGIN:attempts[1] - Сотрудник
+Wed Aug 19 16:19:24 2015 [35609][9d944173-24f7-56ac-6190-55cdc0da24ce][FATAL]  Query Failed:  SELECT  contacts.id , contacts.assigned_user_id  FROM contacts  LEFT JOIN contacts_cstm ON contacts.id = contacts_cstm.id_c  where (id in ()
+			and id not in (select fox_usertask_contactscontacts_ida from fox_usertask_fox_task_c
+			JOIN fox_usertask_contacts_c on
+			fox_usertask_fox_task_c.`fox_usertask_fox_taskfox_usertask_idb` = fox_usertask_contacts_c.fox_usertask_contactsfox_usertask_idb
+			JOIN fox_usertask on fox_usertask.id = fox_usertask_fox_taskfox_usertask_idb and fox_usertask.deleted=0
+			where `fox_usertask_fox_taskfox_task_ida` ='b68e6244-3998-23db-41d8-55d490cf8a00')
+
+			) AND contacts.deleted=0 ORDER BY contacts.first_name LIMIT 1: MySQL error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+			and id not in (select fox_usertask_contactscontacts_ida from fox_usertask_f' at line 1
+Wed Aug 19 16:36:58 2015 [35244][-none-][FATAL] SECURITY: The session ID is invalid

@@ -2,7 +2,7 @@
  //WARNING: The contents of this file are auto-generated
 
 
- // created: 2015-08-16 15:17:32
+ // created: 2015-08-19 16:13:21
 $layout_defs["Contacts"]["subpanel_setup"]['fox_course_contacts_1'] = array (
   'order' => 100,
   'module' => 'fox_Course',
@@ -26,7 +26,7 @@ $layout_defs["Contacts"]["subpanel_setup"]['fox_course_contacts_1'] = array (
 );
 
 
- // created: 2015-08-16 15:17:32
+ // created: 2015-08-19 16:13:21
 $layout_defs["Contacts"]["subpanel_setup"]['fox_course_contacts'] = array (
   'order' => 100,
   'module' => 'fox_Course',
@@ -50,7 +50,7 @@ $layout_defs["Contacts"]["subpanel_setup"]['fox_course_contacts'] = array (
 );
 
 
- // created: 2015-08-16 15:17:32
+ // created: 2015-08-19 16:13:22
 $layout_defs["Contacts"]["subpanel_setup"]['fox_usertask_contacts'] = array (
   'order' => 100,
   'module' => 'fox_UserTask',

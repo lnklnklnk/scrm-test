@@ -154,6 +154,9 @@ class fox_TaskContactsDistribution extends Dashlet {
 
 
 				$userTask->name = $assigned_contact_bean->name .' / '.$row['name'];
+				//var_dump($userTask);
+				//echo $row['script']; exit;
+				$userTask->script=$row['script'];
 				$userTask->save();
 				$userTask->load_relationship('fox_usertask_contacts');
 				$userTask->fox_usertask_contacts->add($assigned_contact_id);
@@ -181,7 +184,7 @@ class fox_TaskContactsDistribution extends Dashlet {
 
 
 				$userTask->name = $test_contact_bean->name .' / '.$row['name'];
-				$userTask->experimental_c=1;
+				$userTask->experimental=1;
 
 				$userTask->save();
 				$userTask->load_relationship('fox_usertask_contacts');

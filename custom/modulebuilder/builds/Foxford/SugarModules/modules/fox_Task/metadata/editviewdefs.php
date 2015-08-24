@@ -47,6 +47,11 @@ array (
         1 => 
         array (
           0 => 'description',
+          1 => 
+          array (
+            'name' => 'script',
+            'label' => 'LBL_SCRIPT',
+          ),
         ),
         2 => 
         array (
